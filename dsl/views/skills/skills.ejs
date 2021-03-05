@@ -1,0 +1,18 @@
+<%-include("../partials/head.ejs") %>
+</head>
+<body>
+    testing
+    <ul>
+        <% for (let i of skills) { %>
+        <li> 
+            <a href="/skills/<%= i.skill %>"> <%= i.skill %> </a> - 
+            <form action="/skills/<%= i.skill %>?_method=DELETE"
+                class="delete-form" method="POST">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+        <% } %>
+    </ul>
+    <a href="/skills/new"> New Skill</a>
+</body>
+</html>

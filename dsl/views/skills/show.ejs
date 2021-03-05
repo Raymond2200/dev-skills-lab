@@ -1,0 +1,11 @@
+<%-include("../partials/head.ejs") %>
+</head>
+<body>
+    <a href="skills.ejs">Skills</a>
+    <h1> My <%= a %> skill is the greatest!</h1>
+    <form action='/skills/<%= a.skill %>?_method=PUT' method='POST' autocomplete='off'>
+        <input type="text" name="updateskills">
+        <button type="submit">Edit</button>
+    </form>
+</body>
+</html>
